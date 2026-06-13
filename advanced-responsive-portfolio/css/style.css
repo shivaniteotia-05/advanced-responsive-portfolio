@@ -1,0 +1,174 @@
+:root{
+    --primary:#2563eb;
+    --bg:#ffffff;
+    --text:#111827;
+    --card:#f3f4f6;
+}
+
+.dark{
+    --primary:#60a5fa;
+    --bg:#111827;
+    --text:#ffffff;
+    --card:#1f2937;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial,sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    transition:.3s;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+header{
+    position:sticky;
+    top:0;
+    background:var(--bg);
+    box-shadow:0 2px 10px rgba(0,0,0,.1);
+}
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:1rem 0;
+}
+
+.nav-links{
+    display:flex;
+    gap:1.5rem;
+    list-style:none;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:var(--text);
+}
+
+.hero{
+    min-height:90vh;
+    display:grid;
+    place-items:center;
+    text-align:center;
+}
+
+.hero h1{
+    font-size:3rem;
+}
+
+.hero p{
+    margin:1rem 0;
+}
+
+.hero-buttons{
+    display:flex;
+    justify-content:center;
+    gap:1rem;
+}
+
+.btn{
+    padding:12px 24px;
+    border-radius:8px;
+    text-decoration:none;
+    border:none;
+    cursor:pointer;
+}
+
+.primary{
+    background:var(--primary);
+    color:white;
+}
+
+.secondary{
+    border:2px solid var(--primary);
+    color:var(--primary);
+}
+
+section{
+    padding:5rem 0;
+}
+
+h2{
+    margin-bottom:2rem;
+    text-align:center;
+}
+
+.about-grid,
+.skills-grid,
+.projects-grid{
+    display:grid;
+    gap:1.5rem;
+}
+
+.skills-grid{
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+}
+
+.projects-grid{
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+}
+
+.card{
+    background:var(--card);
+    padding:2rem;
+    border-radius:12px;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.contact-form{
+    display:flex;
+    flex-direction:column;
+    gap:1rem;
+    max-width:600px;
+    margin:auto;
+}
+
+.contact-form input,
+.contact-form textarea{
+    padding:1rem;
+    border:1px solid #ccc;
+    border-radius:8px;
+}
+
+footer{
+    text-align:center;
+    padding:2rem;
+}
+
+/* Mobile First */
+
+@media (max-width:768px){
+
+    .navbar{
+        flex-direction:column;
+        gap:1rem;
+    }
+
+    .nav-links{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero h1{
+        font-size:2rem;
+    }
+
+    .hero-buttons{
+        flex-direction:column;
+    }
+}
